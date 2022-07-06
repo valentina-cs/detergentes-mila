@@ -1,0 +1,282 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(./font/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: Shrikhand;
+  src: url(./font/Shrikhand-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  display:grid;
+  font-family: OpenSans;
+  font-size: 20px;
+  background-color: #C0D7E9;
+  height: max-content;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header   header"
+    "main     aside"
+    "footer   footer";
+}
+
+header {
+  grid-area: header;
+  background-color: #FDE954;
+  justify-content: center;
+  height: max-content;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.grid {
+  height: auto;
+  background-color: #C3E93E;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+
+.header__item {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 50px 50px -50px #C0D7E9;
+  color: #F2B705;
+  transition:transform 0.3s;
+}
+
+
+.card:hover{
+  transform: translateY(-15px);
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card__header small {
+  background-color: #FDE954;
+  color: #F2B705;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  border-bottom-left-radius: 10px;
+}
+
+.products {
+  margin-top: 20px;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+}
+
+.product__title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FC3556;
+}
+
+.card__description {
+  margin-bottom: 30px;
+}
+
+.card__link {
+  background-color: #C3E93E;
+  color: #FC3556;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card__header--strong {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.gotita{
+  position: fixed;
+  width: 30%;
+  flex-wrap: wrap;
+  z-index: 1000;
+  background-image: url(./img/gotita.svg);
+  background-repeat: no-repeat;
+  justify-content: center;
+  z-index: -1;
+}
+
+.faq {
+  align-items: center;
+  font-family: OpenSans;
+  color: white;
+  text-shadow: black;
+  text-align: justify;
+  text-decoration: double;
+  z-index: 10;
+
+}
+
+
+.respuestasFaq {
+  font-family: OpenSans;
+  color: black;
+  text-align: justify;
+  margin: 30px;
+}
+
+.formulario__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.formulario {
+  font-family: OpenSans;
+  color: #FC3556;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+aside {
+  grid-area: aside;
+  font-size: x-small;
+  font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 1vw;
+  padding:20px ;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.logoHeader {
+  font-family: Shrikhand;
+  color: #FC3556;
+  font-size: 3rem;
+}
+
+.subTituloLogoHeader {
+  font-family: Shrikhand;
+  color: #F2B705;
+  font-size: 2.1rem;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.familiaimagen img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+
+}
+
+.banner {
+  background-image: url(./img/familia-horizontal.jpg);
+  height: max-content;
+  /* max-height: max-content;
+    height: 50vh; */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white
+}
+
+.footer__text {
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+main {
+  grid-area: main;
+}
+
+
+@media (max-width: 1000px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 400px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navegacion {
+    /* display: none; */
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media (max-width:600px) {
+  .formulario__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+@media (max-width:600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media(max-width:1000px){
+  aside{
+    display: none;
+  }
+}
