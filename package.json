@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass --include-path sass style.scss style.css -w"
+    "build": "node-sass --include-path sass sass/index.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valentina-cs/detergentes-mila.git"
   },
-  "author": "",
+  "author": "valentina",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/valentina-cs/detergentes-mila/issues"
@@ -230,5 +230,6 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^20.2.9"
   },
-  "description": ""
+  "description": "proyecto final"
 }
+
